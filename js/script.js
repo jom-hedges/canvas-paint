@@ -1,23 +1,42 @@
 const canvas = document.getElementById("gamespace");
 const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+const dx = 2;
+const dy = -2;
 
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD"
+  ctx.fill();
+  ctx.closePath();
+}
 
-ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math * PI * 2, false);
-ctx.fillStyle = "green";
-ctx.fill();
-ctx.closePath();
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
 
-ctx.beginPath();
-ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgb(0 0 255 / 0.5)";
-ctx.stroke();
-ctx.closePath();
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx
+  }
+  if (y + dx > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+document.getElementById("runButton").addEventListener("click", function () {
+  startGame();
+  this.disabled = true;
+});
 
 
 
