@@ -1,0 +1,19 @@
+{
+  "name": "canvas-paint",
+  "version": "1.0.0",
+  "description": "a jezzball game",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jom-hedges/canvas-paint.git"
+  },
+  "author": "hedgebender",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jom-hedges/canvas-paint/issues"
+  },
+  "homepage": "https://github.com/jom-hedges/canvas-paint#readme"
+}

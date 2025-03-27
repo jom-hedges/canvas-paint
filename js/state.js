@@ -7,7 +7,11 @@ export const initialState = {
   dx: 2,
   dy: -2,
   ballRadius: 10,
-  color: "#0095DD"
+  color: "#0095DD",
+  walls: [
+    { x: 100, y: 50, width: 10, height: 300 },
+    { x: 200, y: 150, width: 200, height: 10 }
+  ]
 };
 
 // Function to update ball state (returns new state)
@@ -23,7 +27,7 @@ export const updateBallState = (state) => {
     dx: hitWallX ? -dx : dx,
     dy: hitWallY ? -dy : dy,
     color: hitWallX || hitWallY ? getRandomColor() : color,
-    ballRadius,
+    ballRadius
   };
 };
 
