@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jom-hedges/canvas-paint/issues"
   },
-  "homepage": "https://github.com/jom-hedges/canvas-paint#readme"
+  "homepage": "https://github.com/jom-hedges/canvas-paint#readme",
+  "devDependencies": {
+    "vite": "^6.2.3"
+  }
 }
