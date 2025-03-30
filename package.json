@@ -4,6 +4,7 @@
   "description": "a jezzball game",
   "main": "index.html",
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
